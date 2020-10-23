@@ -9,7 +9,7 @@ session_destroy();
 <?php
 error_reporting(0);
 session_start();
-$mysqli=new mysqli('localhost','myuser','','cse');
+$mysqli=new mysqli('localhost','myuser','Iajneevarp321@','cse');
 $email=$_SESSION["email"];
 $first=$mysqli->query("select FIRST_NAME,LAST_NAME from TEST where EMAIL='$email'");
 while($row = $first->fetch_assoc()){
@@ -55,7 +55,7 @@ body, html {
   box-sizing: border-box;
 }
 input[type=text], textarea,input[type=email] {
-  width: 100%;
+  width: 50%;
   padding: 15px;
   margin: 5px 0 22px 0;
   border: 1px;
@@ -87,7 +87,7 @@ input[type=text]:focus, textarea:focus,input[type=email]:focus {
 </style>
 </head>
 <body>
-
+<center>
   <form action="" method="post" >
     <h1>Send your mail here!</h1>
     <input type="email" name="to" placeholder="TO" required>
@@ -95,7 +95,7 @@ input[type=text]:focus, textarea:focus,input[type=email]:focus {
     <input type="text" id="country"  value=<?php  echo " $email"; ?> readonly>
     <textarea  name="message" rows=10 placeholder="Enter your message here" required></textarea>
    <center> <button type="submit" class="btn" name="submit" >SEND</button></center>
-   </form>
+   </form></center>
 </body>
 </html>
 
