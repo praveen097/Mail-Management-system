@@ -9,7 +9,7 @@ session_destroy();
 <?php
 error_reporting(0);
 session_start();
-$mysqli=new mysqli('localhost','myuser','','cse');
+$mysqli=new mysqli('localhost','myuser','Iajneevarp321@','cse');
 $email=$_SESSION["email"];
 $first=$mysqli->query("select FIRST_NAME,LAST_NAME from TEST where EMAIL='$email'");
 while($row = $first->fetch_assoc()){

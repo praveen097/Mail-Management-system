@@ -6,7 +6,7 @@ $psd2=$_POST['psd2'];
 if($psd2!=$psd1){
 $error="Paswords do not match!";
 }else{
-$link = mysqli_connect("localhost", "myuser", "", "cse");
+$link = mysqli_connect("localhost", "myuser", "Iajneevarp321@", "cse");
 
 if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());

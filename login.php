@@ -2,7 +2,7 @@
 session_start();
 $error=NULL;
 if(isset($_POST['submit'])){
-$mysqli=new mysqli('localhost','myuser','','cse');
+$mysqli=new mysqli('localhost','myuser','Iajneevarp321@','cse');
 $email=$mysqli->real_escape_string($_POST['email']);
 $pass=$mysqli->real_escape_string($_POST['psw']);
 $pass=md5($pass);
